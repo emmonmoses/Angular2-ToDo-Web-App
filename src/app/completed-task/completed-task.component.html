@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<div class="container"><br/>
+  <span class="radioClass">Tasks : </span>
+
+  <input type="radio" name="options" value="All" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>
+  <span class="radioClass">{{"All("+all+")"}}</span>
+
+  <input type="radio" name="options" value="false" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>
+  <span class="radioClass">{{"Incomplete("+incomplete+")"}}</span>
+
+  <input type="radio" name="options" value="true" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>
+  <span class="radioClass">{{"Complete("+complete+")"}}</span>
+</div>
+

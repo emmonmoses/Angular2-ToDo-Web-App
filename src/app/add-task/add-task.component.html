@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<app-menu></app-menu>
+<div class="container"><br/>
+  <div class="row">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Add Task</div>
+      <div class="panel-body">
+        <div class="form-group mx-sm-3 mb-2">
+          <form (submit)="addTask()">
+            <div *ngIf="isAdded" class="alert alert-success">
+              <span>Task Added Succesfully</span>
+            </div>
+            <input type="text" [(ngModel)]="task.Task" name="TaskName" class="form-control" placeholder="Type a new task" />
+            <br/>
+            <input class="btn btn-primary" type="submit" value="SUBMIT" id="btn">
+            <button class="btn btn-primary" (click)="goBack()" id="btn2">
+              <span class="glyphicon glyphicon-home"></span> CLOSE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

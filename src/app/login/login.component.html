@@ -1,0 +1,13 @@
+ <!doctype html>
+<div class="login-page">
+  <div *ngIf="isLoginError" class="alert alert-warning">
+    <span>Incorrect userName</span>
+  </div>
+  <div class="form">
+    <form #loginForm (submit)="onLogin()" class="login-form">
+      <input type="text" [(ngModel)]="fullname" name="FullName" placeholder="Enter your Username" />
+      <button type="submit">Login</button><br/><br/>
+       <a style="color: skyblue;" [routerLink]="['/register']">Register </a>
+    </form>
+  </div>
+</div>

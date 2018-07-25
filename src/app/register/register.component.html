@@ -1,0 +1,72 @@
+<!doctype html>
+<div class="login-page">
+    <div *ngIf="isRegistered" class="alert alert-success">
+        <span>Registration Succesful</span>
+      </div>
+  <div class="form">
+    <form (submit) = "onSubmit()" class="login-form">
+      <input type="text" [(ngModel)] = "user.FullName" name="name" placeholder="Enter your fullnames to register"/>
+      <button type="submit">Register</button><br/><br/>
+      <a style="color: skyblue;" routerLink="/">Cancel</a>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="login-page">
+  <div class="form">
+    <form class="login-form">
+      <input type="text" [(ngModel)] = "FullName" name="FullName" placeholder="Enter your fullnames to register"/>
+           <button type="submit" (click)="redirectLogin()">Register</button><br/><br/>
+      <a style="color: skyblue;" routerLink="/">Cancel</a>
+    </form>
+    </div>
+</div>
+    <table class=table table-striped table-bordered>
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>Name</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+         <td>{{user.ID}}</td>
+         <td>{{user.FullName}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+-->
+
+

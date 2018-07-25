@@ -1,0 +1,24 @@
+<!doctype html>
+<app-menu></app-menu>
+<div class="container">
+  <div class="row">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Populate Checkbox</div>
+      <div class="panel-body">
+        <div class="form-group mx-sm-3 mb-2">
+         <!--  <form #checkboxForm="ngForm" (submit)="editPartyRolesSubmit()"> -->
+            <form #checkboxForm="ngForm" (submit)="update()">
+            <div *ngFor="let item of PartyRoles">
+              <label>
+                <input type="checkbox" id="chkID" checked="checked" value="{{item.Id}}" [(ngModel)]="item.checked" [name]="item.Name"
+                class="form-check-input" />
+                <span innerHTML="{{item.Name}}"></span>
+              </label>
+            </div>
+             <input type="submit" class="btn btn-primary" value="Update">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

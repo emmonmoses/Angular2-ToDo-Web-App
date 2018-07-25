@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<app-menu></app-menu>
+<div class="container">  <br/>
+  <div class="row">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Tasks List</div>
+        <div class="panel-body">
+
+            <div *ngIf="isDeleted" class="alert alert-success">
+                <span>Delete Succesful</span>
+              </div>
+
+          <app-completed-task *ngIf="taskList" [all]="getTotalTaskCount()"
+            [complete]="getCompleteCount()" [incomplete]="getIncompleteCount()"
+            (countRadioButtonSelectionChanged)="onTaskCountRadioButtonChange($event)">
+          </app-completed-task><br/>
+
+          <form (submit)="updateTask()">
+              <table id="employees">
+                  <tbody>
+                      <ng-container *ngFor="let task of taskList">
+                        <tr *ngIf="selectedTaskCountRadioButton== 'All' || selectedTaskCountRadioButton== task.Status">
+
+                          <td>
+                            <input type="checkbox" name="Status" (change)="updateTask(task)" class="form-check-input"/>
+                            <span>{{ task.Task }}</span>
+                          </td>
+
+                          <td (click)="deleteTask(task)"><a>DELETE [X]</a></td>
+
+                        </tr>
+                      </ng-container>
+
+                        <tr *ngIf="!taskList">
+                          <td colspan="5">Loading data please wait...</td>
+                        </tr>
+
+                  </tbody>
+              </table>
+
+          </form>
+
+        </div>
+    </div>
+  </div>
+</div>
