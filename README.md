@@ -1,27 +1,27 @@
-# TestAngular
+# Angular-ToDo-Web-App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+This is an Angular ToDo web application created using Typescript, CSS3, HTML 5, Bootstrap 4 and ASP.NET CORE REST API.
+The app can perfom all the CRUD operations-for creating, reading, updating and deleting tasks. For the backend, 
+I am using an ASP.NET Web API service.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli/) version 1.7.4.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Start the server using command -  `ng serve` or `npm start`.
 
-## Code scaffolding
+## Steps to setup ToDo project 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Create an Ionic CLI project
+2. Install below mentioned packages
 
-## Build
+    i. npm install --save bootstrap@4.0.0-beta
+    
+    ii. npm install --save @ng-bootstrap/ng-bootstrap
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+3. Update the angular-cli.json to include Bootstrap CSS
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+"styles": [
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      ],
