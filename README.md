@@ -12,7 +12,7 @@ Start the server using command -  `ng serve` or `npm start`.
 
 ## Steps to setup ToDo project 
 
-1. Create an Ionic CLI project
+1. Open the downloaded Todo webApp folder
 2. Install below mentioned packages
 
     i. npm install --save bootstrap@4.0.0-beta
